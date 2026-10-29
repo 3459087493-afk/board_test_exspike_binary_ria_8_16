@@ -1,0 +1,13 @@
+模块名称,原始功能,当前执行位置,计划执行位置,需要修改的接口,涉及位宽,资源风险,数值正确性风险,验证方式,当前状态
+FAST_FILTER,最低有效事件筛选,FPGA,FPGA,512位缩为16位组,16-bit bitmap,低,低,既有RTL随机及边界仿真,已复用
+INDEX2ABS_SUB_0,one-hot地址解码,FPGA,FPGA,16位零扩展到128位,128-bit输入/9-bit地址,低,低,地址逐项仿真,已复用
+MP_ACC,条件膜电位累加,FPGA,FPGA,累加位宽及lane参数化,48-bit/8-lane,低,溢出和符号扩展,INT64参考与RTL对照,已复用
+SPARSE_PROCESSING,二值overlap/XOR及事件FIFO,未迁移,暂不迁移,需增加符号及新事件格式,512-bit/42-bit原格式,中高,高,三值编码解码恒等测试,阻塞于三值语义
+WEIGHT_TOP,事件驱动卷积权重调度,未迁移,后续评估,改AXI及当前权重布局,原9x8xparallel,高,中高,逐层raw累加对照,未实施
+ternary_attention_top,原工程无可用完整RTL,ARM的QK/AV/LIF,FPGA HP1独立核,新增AXI-Lite和AXI64 master,INT8输入/INT8输出/score INT8/AV 24-bit/LIF INT16,中,中,真实形状software golden和RTL仿真,已实现待Vivado
+QKV projection,稀疏1x1卷积,FPGA矩阵核,FPGA矩阵核,不变,INT16xINT8/48-bit,低,低,30层导出/完整图验证,保持
+QKV BN与三值LIF,生成三值QKV,ARM,ARM,后续需定点融合,FP32/三值,中,高,逐层膜值与spike对照,未迁移
+Attention projection,注意力输出投影,FPGA矩阵核,FPGA矩阵核,不变,INT16xINT8/48-bit,低,低,完整图对照,保持
+Tokenizer im2col/Pooling,窗口展开及降采样,ARM,后续FPGA,需行缓存和边界地址器,FP32/事件,中高,中,五层逐地址对照,未迁移
+BN/普通LIF,归一化及二值事件,ARM,后续融合,需系数及状态存储,FP32到定点待定,中,高,逐层阈值边界测试,未迁移
+残差与reshape,模型拓扑和布局,ARM,后续流式布局,需片上/DDR张量描述符,FP32,中,中,逐元素对照,未迁移

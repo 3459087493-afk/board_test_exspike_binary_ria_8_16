@@ -1,0 +1,128 @@
+[
+  {
+    "t": 0,
+    "cma_free_kb": 97812,
+    "completed": 0,
+    "status": "running",
+    "runner": false
+  },
+  {
+    "t": 10,
+    "cma_free_kb": 88896,
+    "completed": 0,
+    "status": "running",
+    "runner": false
+  },
+  {
+    "t": 20,
+    "cma_free_kb": 61996,
+    "completed": 0,
+    "status": "running",
+    "runner": false
+  },
+  {
+    "t": 30,
+    "cma_free_kb": 79256,
+    "completed": 0,
+    "status": "running",
+    "runner": false
+  },
+  {
+    "t": 40,
+    "cma_free_kb": 79220,
+    "completed": 0,
+    "status": "running",
+    "runner": false
+  },
+  {
+    "t": 50,
+    "cma_free_kb": 79256,
+    "completed": 0,
+    "status": "running",
+    "runner": false
+  },
+  {
+    "t": 60,
+    "cma_free_kb": 79232,
+    "completed": 0,
+    "status": "running",
+    "runner": false
+  },
+  {
+    "t": 70,
+    "cma_free_kb": 66108,
+    "completed": 0,
+    "status": "running",
+    "runner": false
+  },
+  {
+    "t": 80,
+    "cma_free_kb": 79232,
+    "completed": 0,
+    "status": "running",
+    "runner": false
+  },
+  {
+    "t": 90,
+    "cma_free_kb": 79200,
+    "completed": 0,
+    "status": "running",
+    "runner": false
+  },
+  {
+    "t": 100,
+    "cma_free_kb": 79216,
+    "completed": 0,
+    "status": "running",
+    "runner": false
+  },
+  {
+    "t": 110,
+    "cma_free_kb": 79216,
+    "completed": 0,
+    "status": "running",
+    "runner": false
+  },
+  {
+    "t": 120,
+    "cma_free_kb": 66044,
+    "completed": 0,
+    "status": "running",
+    "runner": false
+  },
+  {
+    "t": 130,
+    "cma_free_kb": 79216,
+    "completed": 0,
+    "status": "running",
+    "runner": false
+  },
+  {
+    "t": 140,
+    "cma_free_kb": 79180,
+    "completed": 0,
+    "status": "running",
+    "runner": false
+  },
+  {
+    "t": 150,
+    "cma_free_kb": 79216,
+    "completed": 0,
+    "status": "running",
+    "runner": false
+  },
+  {
+    "t": 160,
+    "cma_free_kb": 79216,
+    "completed": 0,
+    "status": "running",
+    "runner": false
+  },
+  {
+    "t": 170,
+    "cma_free_kb": 129084,
+    "completed": 10,
+    "status": "diagnostic_limit_reached",
+    "runner": false
+  }
+]

@@ -1,0 +1,824 @@
+{
+  "format_version": 1,
+  "file": "exspike_8_16_weights.npz",
+  "checkpoint": "/home/cym/prj2/finn/notebooks/end2end_example/sy2/spikformer-main/cifar10/8_16.model_best.pth.tar",
+  "architecture": "DDR-resident packed weights; reusable FPGA matrix engine",
+  "input_quantization": {
+    "type": "dynamic symmetric int16 per accelerator invocation",
+    "scale": "max(abs(x))/32767, or 1.0 for all-zero tensor",
+    "rounding": "nearest ties-to-even",
+    "saturation": "[-32767,32767]"
+  },
+  "accumulator": {
+    "internal": "signed 48-bit",
+    "output": "signed int32 saturating",
+    "dequantization": "int32 * input_scale * per-output weight_scale"
+  },
+  "sparse_encoding": {
+    "structural_nm": "8:16; selected bits come exclusively from checkpoint masks",
+    "execution": "ExSpike event selection skips zero activations; selected bits gate each lane",
+    "record": "8 output weights in bits0..63, eight structural flags in bits64..71",
+    "physical_word_bits": 128,
+    "physical_bytes_per_8_output_input_column": 16,
+    "compressed_nm_storage": false,
+    "tradeoff": "expanded masked INT8 tile records; larger DDR storage, weights cached per8 outputs and reused over all vectors"
+  },
+  "dense_encoding": "same128-bit record; structural flags all valid output lanes",
+  "layers": [
+    {
+      "name": "patch_embed.block0_conv",
+      "key": "patch_embed__block0_conv",
+      "type": "Conv2d",
+      "sparse_8_of_16": false,
+      "weight_shape": [
+        48,
+        3,
+        3,
+        3
+      ],
+      "out_features": 48,
+      "in_features_flat": 27,
+      "blocks": 2,
+      "output_tiles": 6,
+      "packed_bytes": 2592,
+      "scale_shape": [
+        48
+      ],
+      "bias_present": false,
+      "quantization": "symmetric signed int8 per output channel",
+      "rounding": "round to nearest, ties to even (numpy.rint/torch.round)",
+      "saturation": "clip to [-127,127]",
+      "max_abs_weight_error": 0.0006821602582931519,
+      "mean_abs_weight_error": 0.0002986546023748815,
+      "quantization_zeroed_selected_weights": 0
+    },
+    {
+      "name": "patch_embed.block1_conv",
+      "key": "patch_embed__block1_conv",
+      "type": "Conv2d",
+      "sparse_8_of_16": false,
+      "weight_shape": [
+        96,
+        48,
+        3,
+        3
+      ],
+      "out_features": 96,
+      "in_features_flat": 432,
+      "blocks": 27,
+      "output_tiles": 12,
+      "packed_bytes": 82944,
+      "scale_shape": [
+        96
+      ],
+      "bias_present": false,
+      "quantization": "symmetric signed int8 per output channel",
+      "rounding": "round to nearest, ties to even (numpy.rint/torch.round)",
+      "saturation": "clip to [-127,127]",
+      "max_abs_weight_error": 0.0007982663810253143,
+      "mean_abs_weight_error": 0.0002930783957708627,
+      "quantization_zeroed_selected_weights": 0
+    },
+    {
+      "name": "patch_embed.block2_conv",
+      "key": "patch_embed__block2_conv",
+      "type": "Conv2d",
+      "sparse_8_of_16": false,
+      "weight_shape": [
+        192,
+        96,
+        3,
+        3
+      ],
+      "out_features": 192,
+      "in_features_flat": 864,
+      "blocks": 54,
+      "output_tiles": 24,
+      "packed_bytes": 331776,
+      "scale_shape": [
+        192
+      ],
+      "bias_present": false,
+      "quantization": "symmetric signed int8 per output channel",
+      "rounding": "round to nearest, ties to even (numpy.rint/torch.round)",
+      "saturation": "clip to [-127,127]",
+      "max_abs_weight_error": 0.0007245466113090515,
+      "mean_abs_weight_error": 0.00027487389161251485,
+      "quantization_zeroed_selected_weights": 0
+    },
+    {
+      "name": "patch_embed.block3_conv",
+      "key": "patch_embed__block3_conv",
+      "type": "Conv2d",
+      "sparse_8_of_16": false,
+      "weight_shape": [
+        384,
+        192,
+        3,
+        3
+      ],
+      "out_features": 384,
+      "in_features_flat": 1728,
+      "blocks": 108,
+      "output_tiles": 48,
+      "packed_bytes": 1327104,
+      "scale_shape": [
+        384
+      ],
+      "bias_present": false,
+      "quantization": "symmetric signed int8 per output channel",
+      "rounding": "round to nearest, ties to even (numpy.rint/torch.round)",
+      "saturation": "clip to [-127,127]",
+      "max_abs_weight_error": 0.0009065181948244572,
+      "mean_abs_weight_error": 0.00026631224318407476,
+      "quantization_zeroed_selected_weights": 0
+    },
+    {
+      "name": "patch_embed.block4_conv",
+      "key": "patch_embed__block4_conv",
+      "type": "Conv2d",
+      "sparse_8_of_16": false,
+      "weight_shape": [
+        384,
+        384,
+        3,
+        3
+      ],
+      "out_features": 384,
+      "in_features_flat": 3456,
+      "blocks": 216,
+      "output_tiles": 48,
+      "packed_bytes": 2654208,
+      "scale_shape": [
+        384
+      ],
+      "bias_present": false,
+      "quantization": "symmetric signed int8 per output channel",
+      "rounding": "round to nearest, ties to even (numpy.rint/torch.round)",
+      "saturation": "clip to [-127,127]",
+      "max_abs_weight_error": 0.0012041376903653145,
+      "mean_abs_weight_error": 0.00027628999669104815,
+      "quantization_zeroed_selected_weights": 0
+    },
+    {
+      "name": "block.0.attn.q_conv",
+      "key": "block__0__attn__q_conv",
+      "type": "Conv1d",
+      "sparse_8_of_16": true,
+      "weight_shape": [
+        384,
+        384,
+        1
+      ],
+      "out_features": 384,
+      "in_features_flat": 384,
+      "blocks": 24,
+      "output_tiles": 48,
+      "packed_bytes": 294912,
+      "scale_shape": [
+        384
+      ],
+      "bias_present": false,
+      "quantization": "symmetric signed int8 per output channel",
+      "rounding": "round to nearest, ties to even (numpy.rint/torch.round)",
+      "saturation": "clip to [-127,127]",
+      "max_abs_weight_error": 0.0008798521012067795,
+      "mean_abs_weight_error": 0.00013789202785119414,
+      "quantization_zeroed_selected_weights": 10
+    },
+    {
+      "name": "block.0.attn.k_conv",
+      "key": "block__0__attn__k_conv",
+      "type": "Conv1d",
+      "sparse_8_of_16": true,
+      "weight_shape": [
+        384,
+        384,
+        1
+      ],
+      "out_features": 384,
+      "in_features_flat": 384,
+      "blocks": 24,
+      "output_tiles": 48,
+      "packed_bytes": 294912,
+      "scale_shape": [
+        384
+      ],
+      "bias_present": false,
+      "quantization": "symmetric signed int8 per output channel",
+      "rounding": "round to nearest, ties to even (numpy.rint/torch.round)",
+      "saturation": "clip to [-127,127]",
+      "max_abs_weight_error": 0.000892098993062973,
+      "mean_abs_weight_error": 0.00013333468814380467,
+      "quantization_zeroed_selected_weights": 11
+    },
+    {
+      "name": "block.0.attn.v_conv",
+      "key": "block__0__attn__v_conv",
+      "type": "Conv1d",
+      "sparse_8_of_16": true,
+      "weight_shape": [
+        384,
+        384,
+        1
+      ],
+      "out_features": 384,
+      "in_features_flat": 384,
+      "blocks": 24,
+      "output_tiles": 48,
+      "packed_bytes": 294912,
+      "scale_shape": [
+        384
+      ],
+      "bias_present": false,
+      "quantization": "symmetric signed int8 per output channel",
+      "rounding": "round to nearest, ties to even (numpy.rint/torch.round)",
+      "saturation": "clip to [-127,127]",
+      "max_abs_weight_error": 0.0007595866918563843,
+      "mean_abs_weight_error": 0.00013222523557487875,
+      "quantization_zeroed_selected_weights": 10
+    },
+    {
+      "name": "block.0.attn.proj_conv",
+      "key": "block__0__attn__proj_conv",
+      "type": "Conv1d",
+      "sparse_8_of_16": false,
+      "weight_shape": [
+        384,
+        384,
+        1
+      ],
+      "out_features": 384,
+      "in_features_flat": 384,
+      "blocks": 24,
+      "output_tiles": 48,
+      "packed_bytes": 294912,
+      "scale_shape": [
+        384
+      ],
+      "bias_present": true,
+      "quantization": "symmetric signed int8 per output channel",
+      "rounding": "round to nearest, ties to even (numpy.rint/torch.round)",
+      "saturation": "clip to [-127,127]",
+      "max_abs_weight_error": 0.000682346522808075,
+      "mean_abs_weight_error": 0.0002450890315230936,
+      "quantization_zeroed_selected_weights": 0
+    },
+    {
+      "name": "block.0.mlp.mlp1_conv",
+      "key": "block__0__mlp__mlp1_conv",
+      "type": "Conv2d",
+      "sparse_8_of_16": true,
+      "weight_shape": [
+        1536,
+        384,
+        1,
+        1
+      ],
+      "out_features": 1536,
+      "in_features_flat": 384,
+      "blocks": 24,
+      "output_tiles": 192,
+      "packed_bytes": 1179648,
+      "scale_shape": [
+        1536
+      ],
+      "bias_present": true,
+      "quantization": "symmetric signed int8 per output channel",
+      "rounding": "round to nearest, ties to even (numpy.rint/torch.round)",
+      "saturation": "clip to [-127,127]",
+      "max_abs_weight_error": 0.0008412525057792664,
+      "mean_abs_weight_error": 0.00012708119174931198,
+      "quantization_zeroed_selected_weights": 29
+    },
+    {
+      "name": "block.0.mlp.mlp2_conv",
+      "key": "block__0__mlp__mlp2_conv",
+      "type": "Conv2d",
+      "sparse_8_of_16": true,
+      "weight_shape": [
+        384,
+        1536,
+        1,
+        1
+      ],
+      "out_features": 384,
+      "in_features_flat": 1536,
+      "blocks": 96,
+      "output_tiles": 48,
+      "packed_bytes": 1179648,
+      "scale_shape": [
+        384
+      ],
+      "bias_present": true,
+      "quantization": "symmetric signed int8 per output channel",
+      "rounding": "round to nearest, ties to even (numpy.rint/torch.round)",
+      "saturation": "clip to [-127,127]",
+      "max_abs_weight_error": 0.0007316172122955322,
+      "mean_abs_weight_error": 0.00012411530769895762,
+      "quantization_zeroed_selected_weights": 121
+    },
+    {
+      "name": "block.1.attn.q_conv",
+      "key": "block__1__attn__q_conv",
+      "type": "Conv1d",
+      "sparse_8_of_16": true,
+      "weight_shape": [
+        384,
+        384,
+        1
+      ],
+      "out_features": 384,
+      "in_features_flat": 384,
+      "blocks": 24,
+      "output_tiles": 48,
+      "packed_bytes": 294912,
+      "scale_shape": [
+        384
+      ],
+      "bias_present": false,
+      "quantization": "symmetric signed int8 per output channel",
+      "rounding": "round to nearest, ties to even (numpy.rint/torch.round)",
+      "saturation": "clip to [-127,127]",
+      "max_abs_weight_error": 0.000803440110757947,
+      "mean_abs_weight_error": 0.00012931492528878152,
+      "quantization_zeroed_selected_weights": 7
+    },
+    {
+      "name": "block.1.attn.k_conv",
+      "key": "block__1__attn__k_conv",
+      "type": "Conv1d",
+      "sparse_8_of_16": true,
+      "weight_shape": [
+        384,
+        384,
+        1
+      ],
+      "out_features": 384,
+      "in_features_flat": 384,
+      "blocks": 24,
+      "output_tiles": 48,
+      "packed_bytes": 294912,
+      "scale_shape": [
+        384
+      ],
+      "bias_present": false,
+      "quantization": "symmetric signed int8 per output channel",
+      "rounding": "round to nearest, ties to even (numpy.rint/torch.round)",
+      "saturation": "clip to [-127,127]",
+      "max_abs_weight_error": 0.0007720086723566055,
+      "mean_abs_weight_error": 0.000128930842038244,
+      "quantization_zeroed_selected_weights": 7
+    },
+    {
+      "name": "block.1.attn.v_conv",
+      "key": "block__1__attn__v_conv",
+      "type": "Conv1d",
+      "sparse_8_of_16": true,
+      "weight_shape": [
+        384,
+        384,
+        1
+      ],
+      "out_features": 384,
+      "in_features_flat": 384,
+      "blocks": 24,
+      "output_tiles": 48,
+      "packed_bytes": 294912,
+      "scale_shape": [
+        384
+      ],
+      "bias_present": false,
+      "quantization": "symmetric signed int8 per output channel",
+      "rounding": "round to nearest, ties to even (numpy.rint/torch.round)",
+      "saturation": "clip to [-127,127]",
+      "max_abs_weight_error": 0.0007284358143806458,
+      "mean_abs_weight_error": 0.00013009186659473926,
+      "quantization_zeroed_selected_weights": 10
+    },
+    {
+      "name": "block.1.attn.proj_conv",
+      "key": "block__1__attn__proj_conv",
+      "type": "Conv1d",
+      "sparse_8_of_16": false,
+      "weight_shape": [
+        384,
+        384,
+        1
+      ],
+      "out_features": 384,
+      "in_features_flat": 384,
+      "blocks": 24,
+      "output_tiles": 48,
+      "packed_bytes": 294912,
+      "scale_shape": [
+        384
+      ],
+      "bias_present": true,
+      "quantization": "symmetric signed int8 per output channel",
+      "rounding": "round to nearest, ties to even (numpy.rint/torch.round)",
+      "saturation": "clip to [-127,127]",
+      "max_abs_weight_error": 0.0007130131125450134,
+      "mean_abs_weight_error": 0.00024412608763668686,
+      "quantization_zeroed_selected_weights": 0
+    },
+    {
+      "name": "block.1.mlp.mlp1_conv",
+      "key": "block__1__mlp__mlp1_conv",
+      "type": "Conv2d",
+      "sparse_8_of_16": true,
+      "weight_shape": [
+        1536,
+        384,
+        1,
+        1
+      ],
+      "out_features": 1536,
+      "in_features_flat": 384,
+      "blocks": 24,
+      "output_tiles": 192,
+      "packed_bytes": 1179648,
+      "scale_shape": [
+        1536
+      ],
+      "bias_present": true,
+      "quantization": "symmetric signed int8 per output channel",
+      "rounding": "round to nearest, ties to even (numpy.rint/torch.round)",
+      "saturation": "clip to [-127,127]",
+      "max_abs_weight_error": 0.0006609112024307251,
+      "mean_abs_weight_error": 0.0001149567833635956,
+      "quantization_zeroed_selected_weights": 12
+    },
+    {
+      "name": "block.1.mlp.mlp2_conv",
+      "key": "block__1__mlp__mlp2_conv",
+      "type": "Conv2d",
+      "sparse_8_of_16": true,
+      "weight_shape": [
+        384,
+        1536,
+        1,
+        1
+      ],
+      "out_features": 384,
+      "in_features_flat": 1536,
+      "blocks": 96,
+      "output_tiles": 48,
+      "packed_bytes": 1179648,
+      "scale_shape": [
+        384
+      ],
+      "bias_present": true,
+      "quantization": "symmetric signed int8 per output channel",
+      "rounding": "round to nearest, ties to even (numpy.rint/torch.round)",
+      "saturation": "clip to [-127,127]",
+      "max_abs_weight_error": 0.0006230752915143967,
+      "mean_abs_weight_error": 0.00011173827078891918,
+      "quantization_zeroed_selected_weights": 149
+    },
+    {
+      "name": "block.2.attn.q_conv",
+      "key": "block__2__attn__q_conv",
+      "type": "Conv1d",
+      "sparse_8_of_16": true,
+      "weight_shape": [
+        384,
+        384,
+        1
+      ],
+      "out_features": 384,
+      "in_features_flat": 384,
+      "blocks": 24,
+      "output_tiles": 48,
+      "packed_bytes": 294912,
+      "scale_shape": [
+        384
+      ],
+      "bias_present": false,
+      "quantization": "symmetric signed int8 per output channel",
+      "rounding": "round to nearest, ties to even (numpy.rint/torch.round)",
+      "saturation": "clip to [-127,127]",
+      "max_abs_weight_error": 0.0008638575673103333,
+      "mean_abs_weight_error": 0.0001275321119464934,
+      "quantization_zeroed_selected_weights": 4
+    },
+    {
+      "name": "block.2.attn.k_conv",
+      "key": "block__2__attn__k_conv",
+      "type": "Conv1d",
+      "sparse_8_of_16": true,
+      "weight_shape": [
+        384,
+        384,
+        1
+      ],
+      "out_features": 384,
+      "in_features_flat": 384,
+      "blocks": 24,
+      "output_tiles": 48,
+      "packed_bytes": 294912,
+      "scale_shape": [
+        384
+      ],
+      "bias_present": false,
+      "quantization": "symmetric signed int8 per output channel",
+      "rounding": "round to nearest, ties to even (numpy.rint/torch.round)",
+      "saturation": "clip to [-127,127]",
+      "max_abs_weight_error": 0.0008356012403964996,
+      "mean_abs_weight_error": 0.00013059968478046358,
+      "quantization_zeroed_selected_weights": 9
+    },
+    {
+      "name": "block.2.attn.v_conv",
+      "key": "block__2__attn__v_conv",
+      "type": "Conv1d",
+      "sparse_8_of_16": true,
+      "weight_shape": [
+        384,
+        384,
+        1
+      ],
+      "out_features": 384,
+      "in_features_flat": 384,
+      "blocks": 24,
+      "output_tiles": 48,
+      "packed_bytes": 294912,
+      "scale_shape": [
+        384
+      ],
+      "bias_present": false,
+      "quantization": "symmetric signed int8 per output channel",
+      "rounding": "round to nearest, ties to even (numpy.rint/torch.round)",
+      "saturation": "clip to [-127,127]",
+      "max_abs_weight_error": 0.0008250391110777855,
+      "mean_abs_weight_error": 0.00012679147766903043,
+      "quantization_zeroed_selected_weights": 6
+    },
+    {
+      "name": "block.2.attn.proj_conv",
+      "key": "block__2__attn__proj_conv",
+      "type": "Conv1d",
+      "sparse_8_of_16": false,
+      "weight_shape": [
+        384,
+        384,
+        1
+      ],
+      "out_features": 384,
+      "in_features_flat": 384,
+      "blocks": 24,
+      "output_tiles": 48,
+      "packed_bytes": 294912,
+      "scale_shape": [
+        384
+      ],
+      "bias_present": true,
+      "quantization": "symmetric signed int8 per output channel",
+      "rounding": "round to nearest, ties to even (numpy.rint/torch.round)",
+      "saturation": "clip to [-127,127]",
+      "max_abs_weight_error": 0.0006882529705762863,
+      "mean_abs_weight_error": 0.00023772410349920392,
+      "quantization_zeroed_selected_weights": 0
+    },
+    {
+      "name": "block.2.mlp.mlp1_conv",
+      "key": "block__2__mlp__mlp1_conv",
+      "type": "Conv2d",
+      "sparse_8_of_16": true,
+      "weight_shape": [
+        1536,
+        384,
+        1,
+        1
+      ],
+      "out_features": 1536,
+      "in_features_flat": 384,
+      "blocks": 24,
+      "output_tiles": 192,
+      "packed_bytes": 1179648,
+      "scale_shape": [
+        1536
+      ],
+      "bias_present": true,
+      "quantization": "symmetric signed int8 per output channel",
+      "rounding": "round to nearest, ties to even (numpy.rint/torch.round)",
+      "saturation": "clip to [-127,127]",
+      "max_abs_weight_error": 0.0006541423499584198,
+      "mean_abs_weight_error": 0.00010897919128183275,
+      "quantization_zeroed_selected_weights": 14
+    },
+    {
+      "name": "block.2.mlp.mlp2_conv",
+      "key": "block__2__mlp__mlp2_conv",
+      "type": "Conv2d",
+      "sparse_8_of_16": true,
+      "weight_shape": [
+        384,
+        1536,
+        1,
+        1
+      ],
+      "out_features": 384,
+      "in_features_flat": 1536,
+      "blocks": 96,
+      "output_tiles": 48,
+      "packed_bytes": 1179648,
+      "scale_shape": [
+        384
+      ],
+      "bias_present": true,
+      "quantization": "symmetric signed int8 per output channel",
+      "rounding": "round to nearest, ties to even (numpy.rint/torch.round)",
+      "saturation": "clip to [-127,127]",
+      "max_abs_weight_error": 0.000567285344004631,
+      "mean_abs_weight_error": 9.951251558959484e-05,
+      "quantization_zeroed_selected_weights": 127
+    },
+    {
+      "name": "block.3.attn.q_conv",
+      "key": "block__3__attn__q_conv",
+      "type": "Conv1d",
+      "sparse_8_of_16": true,
+      "weight_shape": [
+        384,
+        384,
+        1
+      ],
+      "out_features": 384,
+      "in_features_flat": 384,
+      "blocks": 24,
+      "output_tiles": 48,
+      "packed_bytes": 294912,
+      "scale_shape": [
+        384
+      ],
+      "bias_present": false,
+      "quantization": "symmetric signed int8 per output channel",
+      "rounding": "round to nearest, ties to even (numpy.rint/torch.round)",
+      "saturation": "clip to [-127,127]",
+      "max_abs_weight_error": 0.0007375366985797882,
+      "mean_abs_weight_error": 0.00012491096276789904,
+      "quantization_zeroed_selected_weights": 11
+    },
+    {
+      "name": "block.3.attn.k_conv",
+      "key": "block__3__attn__k_conv",
+      "type": "Conv1d",
+      "sparse_8_of_16": true,
+      "weight_shape": [
+        384,
+        384,
+        1
+      ],
+      "out_features": 384,
+      "in_features_flat": 384,
+      "blocks": 24,
+      "output_tiles": 48,
+      "packed_bytes": 294912,
+      "scale_shape": [
+        384
+      ],
+      "bias_present": false,
+      "quantization": "symmetric signed int8 per output channel",
+      "rounding": "round to nearest, ties to even (numpy.rint/torch.round)",
+      "saturation": "clip to [-127,127]",
+      "max_abs_weight_error": 0.0007673874497413635,
+      "mean_abs_weight_error": 0.0001277204428333789,
+      "quantization_zeroed_selected_weights": 8
+    },
+    {
+      "name": "block.3.attn.v_conv",
+      "key": "block__3__attn__v_conv",
+      "type": "Conv1d",
+      "sparse_8_of_16": true,
+      "weight_shape": [
+        384,
+        384,
+        1
+      ],
+      "out_features": 384,
+      "in_features_flat": 384,
+      "blocks": 24,
+      "output_tiles": 48,
+      "packed_bytes": 294912,
+      "scale_shape": [
+        384
+      ],
+      "bias_present": false,
+      "quantization": "symmetric signed int8 per output channel",
+      "rounding": "round to nearest, ties to even (numpy.rint/torch.round)",
+      "saturation": "clip to [-127,127]",
+      "max_abs_weight_error": 0.0007310807704925537,
+      "mean_abs_weight_error": 0.00012519086885731667,
+      "quantization_zeroed_selected_weights": 13
+    },
+    {
+      "name": "block.3.attn.proj_conv",
+      "key": "block__3__attn__proj_conv",
+      "type": "Conv1d",
+      "sparse_8_of_16": false,
+      "weight_shape": [
+        384,
+        384,
+        1
+      ],
+      "out_features": 384,
+      "in_features_flat": 384,
+      "blocks": 24,
+      "output_tiles": 48,
+      "packed_bytes": 294912,
+      "scale_shape": [
+        384
+      ],
+      "bias_present": true,
+      "quantization": "symmetric signed int8 per output channel",
+      "rounding": "round to nearest, ties to even (numpy.rint/torch.round)",
+      "saturation": "clip to [-127,127]",
+      "max_abs_weight_error": 0.0008065439760684967,
+      "mean_abs_weight_error": 0.0002336449542781338,
+      "quantization_zeroed_selected_weights": 0
+    },
+    {
+      "name": "block.3.mlp.mlp1_conv",
+      "key": "block__3__mlp__mlp1_conv",
+      "type": "Conv2d",
+      "sparse_8_of_16": true,
+      "weight_shape": [
+        1536,
+        384,
+        1,
+        1
+      ],
+      "out_features": 1536,
+      "in_features_flat": 384,
+      "blocks": 24,
+      "output_tiles": 192,
+      "packed_bytes": 1179648,
+      "scale_shape": [
+        1536
+      ],
+      "bias_present": true,
+      "quantization": "symmetric signed int8 per output channel",
+      "rounding": "round to nearest, ties to even (numpy.rint/torch.round)",
+      "saturation": "clip to [-127,127]",
+      "max_abs_weight_error": 0.0007152557373046875,
+      "mean_abs_weight_error": 0.00010658856626832858,
+      "quantization_zeroed_selected_weights": 13
+    },
+    {
+      "name": "block.3.mlp.mlp2_conv",
+      "key": "block__3__mlp__mlp2_conv",
+      "type": "Conv2d",
+      "sparse_8_of_16": true,
+      "weight_shape": [
+        384,
+        1536,
+        1,
+        1
+      ],
+      "out_features": 384,
+      "in_features_flat": 1536,
+      "blocks": 96,
+      "output_tiles": 48,
+      "packed_bytes": 1179648,
+      "scale_shape": [
+        384
+      ],
+      "bias_present": true,
+      "quantization": "symmetric signed int8 per output channel",
+      "rounding": "round to nearest, ties to even (numpy.rint/torch.round)",
+      "saturation": "clip to [-127,127]",
+      "max_abs_weight_error": 0.0006650267168879509,
+      "mean_abs_weight_error": 9.673132444731891e-05,
+      "quantization_zeroed_selected_weights": 212
+    },
+    {
+      "name": "head",
+      "key": "head",
+      "type": "Linear",
+      "sparse_8_of_16": false,
+      "weight_shape": [
+        10,
+        384
+      ],
+      "out_features": 10,
+      "in_features_flat": 384,
+      "blocks": 24,
+      "output_tiles": 2,
+      "packed_bytes": 12288,
+      "scale_shape": [
+        10
+      ],
+      "bias_present": true,
+      "quantization": "symmetric signed int8 per output channel",
+      "rounding": "round to nearest, ties to even (numpy.rint/torch.round)",
+      "saturation": "clip to [-127,127]",
+      "max_abs_weight_error": 0.000329386442899704,
+      "mean_abs_weight_error": 0.00013790804950986058,
+      "quantization_zeroed_selected_weights": 0
+    }
+  ],
+  "total_packed_weight_bytes": 18566688,
+  "npz_size_bytes": 9461993,
+  "storage": "DDR; not assumed to fit in PL BRAM"
+}

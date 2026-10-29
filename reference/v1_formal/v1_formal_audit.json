@@ -1,0 +1,160 @@
+{
+  "source": {
+    "board_directory": "/home/xilinx/jupyter_notebooks/board_test_exspike_main2_8_16_migration_v1/results/subset1000",
+    "local_archive": "/home/cym/prj2/finn/notebooks/end2end_example/sy2/spikformer-main/cifar10/board_test_exspike_main2_8_16_migration_v2_perfopt/baseline_v1_readonly/raw_results",
+    "source_results_sha256": "43e207b30a2d8c28fd561fa695ddea8e0cdd99685c64a8eec8e79b7bebf27c86",
+    "source_predictions_sha256": "1b4a5d594eaadaf6c28872359365817852b8fa0cf47f442f1db9559bdcb87492",
+    "inference_rerun": false
+  },
+  "completion": {
+    "status": "complete",
+    "planned": 1000,
+    "rows": 1000,
+    "unique_dataset_indices": 1000,
+    "duplicate_dataset_indices": [],
+    "missing_dataset_indices": [],
+    "unexpected_dataset_indices": [],
+    "sequence_is_exact_0_to_999": true,
+    "dataset_index_order_matches_protected_subset": true,
+    "labels_match_protected_subset": true,
+    "class_counts": [
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100,
+      100
+    ]
+  },
+  "prediction_integrity": {
+    "invalid_prediction_positions": [],
+    "recorded_correct_flags_match": true,
+    "misclassifications": 96,
+    "nonfinite_latency_fields": []
+  },
+  "accuracy": {
+    "correct": 904,
+    "top1_percent": 90.4,
+    "macro_precision": 0.9046568534604489,
+    "macro_recall": 0.9039999999999999,
+    "macro_f1": 0.9040581426425683
+  },
+  "latency_ms": {
+    "e2e_latency_ms": {
+      "mean": 16848.03783482096,
+      "median": 16809.52504,
+      "p75": 16995.210849000003,
+      "p95": 17186.874520948903,
+      "std": 424.41674211679947,
+      "min": 16194.107822001,
+      "max": 23583.747122
+    },
+    "kernel_latency_ms": {
+      "mean": 7121.122129966026,
+      "median": 7137.2746725015,
+      "p75": 7200.2045800005,
+      "p95": 7280.23315500285,
+      "std": 114.08334304647653,
+      "min": 6641.543510003,
+      "max": 7393.181082999
+    },
+    "matrix_kernel_latency_ms": {
+      "mean": 6503.139240041986,
+      "median": 6519.305480002,
+      "p75": 6582.227006001,
+      "p95": 6662.2201865519,
+      "std": 114.07602508754641,
+      "min": 6023.542833003,
+      "max": 6775.191900999
+    },
+    "attention_kernel_latency_ms": {
+      "mean": 617.982889924,
+      "median": 617.977079,
+      "p75": 617.98879775,
+      "p95": 618.0062795,
+      "std": 0.13084464748969316,
+      "min": 617.936074,
+      "max": 622.071919
+    },
+    "kernel_mean_call_latency_ms": {
+      "mean": 209.44476852842502,
+      "median": 209.919843309,
+      "p75": 211.770722941,
+      "p95": 214.12450455890001,
+      "std": 3.355392442533594,
+      "min": 195.339515,
+      "max": 217.446502441
+    }
+  },
+  "call_counts_per_image": {
+    "total_unique": [
+      34
+    ],
+    "matrix_unique": [
+      30
+    ],
+    "attention_unique": [
+      4
+    ]
+  },
+  "hardware_counter_crosscheck_at_100mhz": {
+    "matrix_active_ms": {
+      "mean": 6501.7743149299995,
+      "median": 6517.89686,
+      "p75": 6580.8703825,
+      "p95": 6660.8739935,
+      "std": 114.06097119103026,
+      "min": 6022.17051,
+      "max": 6773.83393
+    },
+    "attention_active_ms": {
+      "mean": 617.79594793,
+      "median": 617.79379,
+      "p75": 617.79505,
+      "p95": 617.8113285,
+      "std": 0.007314131159275553,
+      "min": 617.79153,
+      "max": 617.88708
+    },
+    "matrix_timed_minus_active_mean_ms": 1.3649251119859964,
+    "attention_timed_minus_active_mean_ms": 0.18694199400000128
+  },
+  "tukey_e2e_high_outliers": {
+    "threshold_ms": 17490.459017620884,
+    "count": 9,
+    "positions": [
+      0,
+      8,
+      10,
+      11,
+      15,
+      203,
+      341,
+      342,
+      841
+    ],
+    "dataset_indices": [
+      6764,
+      9838,
+      3401,
+      7578,
+      4496,
+      4400,
+      7867,
+      2580,
+      3066
+    ]
+  },
+  "timing_granularity": {
+    "per_layer_wall_time_available": false,
+    "per_module_arm_time_available": false,
+    "transfer_or_allocation_time_available": false,
+    "aggregate_matrix_and_attention_time_available": true,
+    "aggregate_hardware_counters_available": true,
+    "note": "V1 rows retain only per-image sums; event_records with layer names were not serialized."
+  }
+}

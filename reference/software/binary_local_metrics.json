@@ -1,0 +1,156 @@
+{
+  "status": "PASS",
+  "samples": 1000,
+  "correct": 885,
+  "accuracy_percent": 88.5,
+  "elapsed_seconds": 45.625330686569214,
+  "checkpoint_sha256": "6ee6a084f61b7b20c4730a1a8ab043079bbd38342bd422ccd32436562b6bd7ad",
+  "checkpoint_metadata": {
+    "ria_nm": "8:16",
+    "source_checkpoint": "/home/free/prj/finn/Spikingformer/cifar10/output/train/20261007-201525-vitsnn-32/model_best.pth.tar",
+    "model_source": "/home/free/prj/finn/Spikingformer/cifar10/model.py",
+    "spike_mode": "binary"
+  },
+  "ria_masks": 20,
+  "ria_kept": 3244032,
+  "ria_total": 6488064,
+  "adapter_missing": [],
+  "adapter_vs_reference_first20_max_abs": 0.0,
+  "adapter_vs_reference_first20": [
+    {
+      "position": 0,
+      "max_abs": 0.0,
+      "adapter_prediction": 5,
+      "reference_prediction": 5
+    },
+    {
+      "position": 1,
+      "max_abs": 0.0,
+      "adapter_prediction": 6,
+      "reference_prediction": 6
+    },
+    {
+      "position": 2,
+      "max_abs": 0.0,
+      "adapter_prediction": 5,
+      "reference_prediction": 5
+    },
+    {
+      "position": 3,
+      "max_abs": 0.0,
+      "adapter_prediction": 9,
+      "reference_prediction": 9
+    },
+    {
+      "position": 4,
+      "max_abs": 0.0,
+      "adapter_prediction": 8,
+      "reference_prediction": 8
+    },
+    {
+      "position": 5,
+      "max_abs": 0.0,
+      "adapter_prediction": 2,
+      "reference_prediction": 2
+    },
+    {
+      "position": 6,
+      "max_abs": 0.0,
+      "adapter_prediction": 1,
+      "reference_prediction": 1
+    },
+    {
+      "position": 7,
+      "max_abs": 0.0,
+      "adapter_prediction": 4,
+      "reference_prediction": 4
+    },
+    {
+      "position": 8,
+      "max_abs": 0.0,
+      "adapter_prediction": 5,
+      "reference_prediction": 5
+    },
+    {
+      "position": 9,
+      "max_abs": 0.0,
+      "adapter_prediction": 4,
+      "reference_prediction": 4
+    },
+    {
+      "position": 10,
+      "max_abs": 0.0,
+      "adapter_prediction": 2,
+      "reference_prediction": 2
+    },
+    {
+      "position": 11,
+      "max_abs": 0.0,
+      "adapter_prediction": 9,
+      "reference_prediction": 9
+    },
+    {
+      "position": 12,
+      "max_abs": 0.0,
+      "adapter_prediction": 4,
+      "reference_prediction": 4
+    },
+    {
+      "position": 13,
+      "max_abs": 0.0,
+      "adapter_prediction": 4,
+      "reference_prediction": 4
+    },
+    {
+      "position": 14,
+      "max_abs": 0.0,
+      "adapter_prediction": 0,
+      "reference_prediction": 0
+    },
+    {
+      "position": 15,
+      "max_abs": 0.0,
+      "adapter_prediction": 8,
+      "reference_prediction": 8
+    },
+    {
+      "position": 16,
+      "max_abs": 0.0,
+      "adapter_prediction": 9,
+      "reference_prediction": 9
+    },
+    {
+      "position": 17,
+      "max_abs": 0.0,
+      "adapter_prediction": 1,
+      "reference_prediction": 1
+    },
+    {
+      "position": 18,
+      "max_abs": 0.0,
+      "adapter_prediction": 6,
+      "reference_prediction": 6
+    },
+    {
+      "position": 19,
+      "max_abs": 0.0,
+      "adapter_prediction": 5,
+      "reference_prediction": 5
+    }
+  ],
+  "prior_logits_agreement": 1000,
+  "prior_logits_max_abs": 0.0,
+  "spike_semantics": "binary 0/1, tau=2, base threshold=1, attention LIF threshold=0.5, hard reset",
+  "indices_first10": [
+    6764,
+    4767,
+    4069,
+    8000,
+    6610,
+    833,
+    7532,
+    6866,
+    9838,
+    2002
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "npz": "/home/cym/prj2/finn/notebooks/end2end_example/sy2/spikformer-main/cifar10/board_test_exspike_binary_ria_8_16/deployment/binary_ria_8_16_weights.npz",
+  "sha256": "7972f820b767e72465e89228a0cc93f4b54733cfd081b31172fbb4c6c10eaec9",
+  "layers": 30,
+  "packed_bytes": 18566688,
+  "npz_bytes": 9296947
+}

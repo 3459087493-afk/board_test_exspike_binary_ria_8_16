@@ -1,0 +1,18 @@
+{
+  "scope": "diagnostic interrupted first 1000-image attempt; not final",
+  "rows": 33,
+  "correct": 31,
+  "accuracy_percent": 93.93939393939394,
+  "software_agreement": 33,
+  "calls": [
+    [
+      34,
+      30,
+      4
+    ]
+  ],
+  "progress_status": "interrupted",
+  "mean_e2e_ms": 17349.517802545153,
+  "mean_kernel_ms": 7428.9818630909085,
+  "note": "stopped at 33/1000 to fix PYNQ 2.7 Attention CMA leak; excluded from final results"
+}

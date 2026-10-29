@@ -1,0 +1,322 @@
+{
+  "status": "PASS",
+  "checkpoint": "/home/cym/prj2/finn/notebooks/end2end_example/sy2/spikformer-main/cifar10/binary_ria_pruned_816.pth",
+  "checkpoint_sha256": "6ee6a084f61b7b20c4730a1a8ab043079bbd38342bd422ccd32436562b6bd7ad",
+  "n": 8,
+  "m": 16,
+  "layer_count": 20,
+  "total_weights": 6488064,
+  "kept_weights": 3244032,
+  "sparsity": 0.5,
+  "all_groups_exact_8_of_16": true,
+  "layers": [
+    {
+      "layer": "block.0.attn.k_conv",
+      "shape": [
+        384,
+        384,
+        1
+      ],
+      "groups": 9216,
+      "min_kept_per_group": 8,
+      "max_kept_per_group": 8,
+      "total": 147456,
+      "kept": 73728,
+      "sparsity": 0.5,
+      "selected_weights_that_are_zero": 0
+    },
+    {
+      "layer": "block.0.attn.q_conv",
+      "shape": [
+        384,
+        384,
+        1
+      ],
+      "groups": 9216,
+      "min_kept_per_group": 8,
+      "max_kept_per_group": 8,
+      "total": 147456,
+      "kept": 73728,
+      "sparsity": 0.5,
+      "selected_weights_that_are_zero": 0
+    },
+    {
+      "layer": "block.0.attn.v_conv",
+      "shape": [
+        384,
+        384,
+        1
+      ],
+      "groups": 9216,
+      "min_kept_per_group": 8,
+      "max_kept_per_group": 8,
+      "total": 147456,
+      "kept": 73728,
+      "sparsity": 0.5,
+      "selected_weights_that_are_zero": 0
+    },
+    {
+      "layer": "block.0.mlp.mlp1_conv",
+      "shape": [
+        1536,
+        384,
+        1,
+        1
+      ],
+      "groups": 36864,
+      "min_kept_per_group": 8,
+      "max_kept_per_group": 8,
+      "total": 589824,
+      "kept": 294912,
+      "sparsity": 0.5,
+      "selected_weights_that_are_zero": 0
+    },
+    {
+      "layer": "block.0.mlp.mlp2_conv",
+      "shape": [
+        384,
+        1536,
+        1,
+        1
+      ],
+      "groups": 36864,
+      "min_kept_per_group": 8,
+      "max_kept_per_group": 8,
+      "total": 589824,
+      "kept": 294912,
+      "sparsity": 0.5,
+      "selected_weights_that_are_zero": 0
+    },
+    {
+      "layer": "block.1.attn.k_conv",
+      "shape": [
+        384,
+        384,
+        1
+      ],
+      "groups": 9216,
+      "min_kept_per_group": 8,
+      "max_kept_per_group": 8,
+      "total": 147456,
+      "kept": 73728,
+      "sparsity": 0.5,
+      "selected_weights_that_are_zero": 0
+    },
+    {
+      "layer": "block.1.attn.q_conv",
+      "shape": [
+        384,
+        384,
+        1
+      ],
+      "groups": 9216,
+      "min_kept_per_group": 8,
+      "max_kept_per_group": 8,
+      "total": 147456,
+      "kept": 73728,
+      "sparsity": 0.5,
+      "selected_weights_that_are_zero": 0
+    },
+    {
+      "layer": "block.1.attn.v_conv",
+      "shape": [
+        384,
+        384,
+        1
+      ],
+      "groups": 9216,
+      "min_kept_per_group": 8,
+      "max_kept_per_group": 8,
+      "total": 147456,
+      "kept": 73728,
+      "sparsity": 0.5,
+      "selected_weights_that_are_zero": 0
+    },
+    {
+      "layer": "block.1.mlp.mlp1_conv",
+      "shape": [
+        1536,
+        384,
+        1,
+        1
+      ],
+      "groups": 36864,
+      "min_kept_per_group": 8,
+      "max_kept_per_group": 8,
+      "total": 589824,
+      "kept": 294912,
+      "sparsity": 0.5,
+      "selected_weights_that_are_zero": 0
+    },
+    {
+      "layer": "block.1.mlp.mlp2_conv",
+      "shape": [
+        384,
+        1536,
+        1,
+        1
+      ],
+      "groups": 36864,
+      "min_kept_per_group": 8,
+      "max_kept_per_group": 8,
+      "total": 589824,
+      "kept": 294912,
+      "sparsity": 0.5,
+      "selected_weights_that_are_zero": 0
+    },
+    {
+      "layer": "block.2.attn.k_conv",
+      "shape": [
+        384,
+        384,
+        1
+      ],
+      "groups": 9216,
+      "min_kept_per_group": 8,
+      "max_kept_per_group": 8,
+      "total": 147456,
+      "kept": 73728,
+      "sparsity": 0.5,
+      "selected_weights_that_are_zero": 0
+    },
+    {
+      "layer": "block.2.attn.q_conv",
+      "shape": [
+        384,
+        384,
+        1
+      ],
+      "groups": 9216,
+      "min_kept_per_group": 8,
+      "max_kept_per_group": 8,
+      "total": 147456,
+      "kept": 73728,
+      "sparsity": 0.5,
+      "selected_weights_that_are_zero": 0
+    },
+    {
+      "layer": "block.2.attn.v_conv",
+      "shape": [
+        384,
+        384,
+        1
+      ],
+      "groups": 9216,
+      "min_kept_per_group": 8,
+      "max_kept_per_group": 8,
+      "total": 147456,
+      "kept": 73728,
+      "sparsity": 0.5,
+      "selected_weights_that_are_zero": 0
+    },
+    {
+      "layer": "block.2.mlp.mlp1_conv",
+      "shape": [
+        1536,
+        384,
+        1,
+        1
+      ],
+      "groups": 36864,
+      "min_kept_per_group": 8,
+      "max_kept_per_group": 8,
+      "total": 589824,
+      "kept": 294912,
+      "sparsity": 0.5,
+      "selected_weights_that_are_zero": 0
+    },
+    {
+      "layer": "block.2.mlp.mlp2_conv",
+      "shape": [
+        384,
+        1536,
+        1,
+        1
+      ],
+      "groups": 36864,
+      "min_kept_per_group": 8,
+      "max_kept_per_group": 8,
+      "total": 589824,
+      "kept": 294912,
+      "sparsity": 0.5,
+      "selected_weights_that_are_zero": 0
+    },
+    {
+      "layer": "block.3.attn.k_conv",
+      "shape": [
+        384,
+        384,
+        1
+      ],
+      "groups": 9216,
+      "min_kept_per_group": 8,
+      "max_kept_per_group": 8,
+      "total": 147456,
+      "kept": 73728,
+      "sparsity": 0.5,
+      "selected_weights_that_are_zero": 0
+    },
+    {
+      "layer": "block.3.attn.q_conv",
+      "shape": [
+        384,
+        384,
+        1
+      ],
+      "groups": 9216,
+      "min_kept_per_group": 8,
+      "max_kept_per_group": 8,
+      "total": 147456,
+      "kept": 73728,
+      "sparsity": 0.5,
+      "selected_weights_that_are_zero": 0
+    },
+    {
+      "layer": "block.3.attn.v_conv",
+      "shape": [
+        384,
+        384,
+        1
+      ],
+      "groups": 9216,
+      "min_kept_per_group": 8,
+      "max_kept_per_group": 8,
+      "total": 147456,
+      "kept": 73728,
+      "sparsity": 0.5,
+      "selected_weights_that_are_zero": 0
+    },
+    {
+      "layer": "block.3.mlp.mlp1_conv",
+      "shape": [
+        1536,
+        384,
+        1,
+        1
+      ],
+      "groups": 36864,
+      "min_kept_per_group": 8,
+      "max_kept_per_group": 8,
+      "total": 589824,
+      "kept": 294912,
+      "sparsity": 0.5,
+      "selected_weights_that_are_zero": 0
+    },
+    {
+      "layer": "block.3.mlp.mlp2_conv",
+      "shape": [
+        384,
+        1536,
+        1,
+        1
+      ],
+      "groups": 36864,
+      "min_kept_per_group": 8,
+      "max_kept_per_group": 8,
+      "total": 589824,
+      "kept": 294912,
+      "sparsity": 0.5,
+      "selected_weights_that_are_zero": 0
+    }
+  ]
+}

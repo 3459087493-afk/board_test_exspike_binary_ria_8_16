@@ -1,0 +1,73 @@
+{
+  "status": "PASS",
+  "checkpoint_strict_load": true,
+  "ria_layers": 20,
+  "all_ria_groups_exact_8_of_16": true,
+  "exported_layers_compared_to_checkpoint": 30,
+  "exported_weight_arrays_exact": true,
+  "selected_structural_weights_quantized_to_zero": 783,
+  "full_graph_single_image": {
+    "bit_exact": true,
+    "max_abs_error": 0.0,
+    "kernel_calls": 30,
+    "prediction": 3
+  },
+  "datasets": {
+    "cifar10_test": {
+      "samples": 10000,
+      "shape": [
+        10000,
+        3,
+        32,
+        32
+      ],
+      "dtype": "float32",
+      "class_counts": [
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000
+      ],
+      "unique_indices": 10000
+    },
+    "cifar10_subset1000": {
+      "samples": 1000,
+      "shape": [
+        1000,
+        3,
+        32,
+        32
+      ],
+      "dtype": "float32",
+      "class_counts": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "unique_indices": 1000
+    }
+  },
+  "rtl_simulation": {
+    "status": "PASS",
+    "cases": 10
+  },
+  "new_build_artifacts": {
+    "exspike_8_16.bit": "5cc9e5fbc56a30e2e01bb3824d79b2627836688e60f1e4ec7a880359713c2976",
+    "exspike_8_16.hwh": "957dbaca9200a9961daff6d85c3cb1c32ffc933376fb357adeedc0f11bf4b68e",
+    "exspike_8_16.xsa": "3ff1166d53e252249d3ea50b98ac2756b1ea6663a8b080b574e7e085e92372a7",
+    "exspike_8_16_weights.npz": "50b726a81dd6474b4f954af41c7eed4cce00279a3bf6602d02649c6c022eb384"
+  }
+}

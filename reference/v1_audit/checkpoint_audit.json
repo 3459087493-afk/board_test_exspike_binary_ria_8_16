@@ -1,0 +1,162 @@
+{
+  "status": "PASS",
+  "checkpoint": "/home/cym/prj2/finn/notebooks/end2end_example/sy2/spikformer-main/cifar10/8_16.model_best.pth.tar",
+  "checkpoint_sha256": "4d2af5f76b758f4c7dcd3540c4e5cd24e4b71ecfa960c57d3886be0bca3c9531",
+  "nm8_16_path": "/home/cym/prj2/finn/notebooks/end2end_example/sy2/spikformer-main/cifar10/nm8_16.py",
+  "nm8_16_sha256": "d0fb5ebb62fcb49933ab02d673b2759bc70de3032f9669eeb6bcea56e803c85a",
+  "epoch": 43,
+  "stored_metric": 90.5,
+  "state_dict_keys": 284,
+  "strict_load": true,
+  "missing_keys": [],
+  "unexpected_keys": [],
+  "shape_mismatches": [],
+  "time_steps": 4,
+  "checkpoint_field_ternary_threshold": 0.75,
+  "effective_training_and_inference_threshold": 1.0,
+  "threshold_reason": "training create_model omitted the CLI threshold; constructor default 1.0 was effective",
+  "ternary_reset": "v = v - spike * threshold; positive and negative soft reset",
+  "ria_mask_source": "mask buffers stored in checkpoint state_dict",
+  "ria_layers": [
+    {
+      "layer": "block.0.attn.q_conv",
+      "groups": 9216,
+      "min_kept": 8,
+      "max_kept": 8,
+      "invalid_groups": 0
+    },
+    {
+      "layer": "block.0.attn.k_conv",
+      "groups": 9216,
+      "min_kept": 8,
+      "max_kept": 8,
+      "invalid_groups": 0
+    },
+    {
+      "layer": "block.0.attn.v_conv",
+      "groups": 9216,
+      "min_kept": 8,
+      "max_kept": 8,
+      "invalid_groups": 0
+    },
+    {
+      "layer": "block.0.mlp.mlp1_conv",
+      "groups": 36864,
+      "min_kept": 8,
+      "max_kept": 8,
+      "invalid_groups": 0
+    },
+    {
+      "layer": "block.0.mlp.mlp2_conv",
+      "groups": 36864,
+      "min_kept": 8,
+      "max_kept": 8,
+      "invalid_groups": 0
+    },
+    {
+      "layer": "block.1.attn.q_conv",
+      "groups": 9216,
+      "min_kept": 8,
+      "max_kept": 8,
+      "invalid_groups": 0
+    },
+    {
+      "layer": "block.1.attn.k_conv",
+      "groups": 9216,
+      "min_kept": 8,
+      "max_kept": 8,
+      "invalid_groups": 0
+    },
+    {
+      "layer": "block.1.attn.v_conv",
+      "groups": 9216,
+      "min_kept": 8,
+      "max_kept": 8,
+      "invalid_groups": 0
+    },
+    {
+      "layer": "block.1.mlp.mlp1_conv",
+      "groups": 36864,
+      "min_kept": 8,
+      "max_kept": 8,
+      "invalid_groups": 0
+    },
+    {
+      "layer": "block.1.mlp.mlp2_conv",
+      "groups": 36864,
+      "min_kept": 8,
+      "max_kept": 8,
+      "invalid_groups": 0
+    },
+    {
+      "layer": "block.2.attn.q_conv",
+      "groups": 9216,
+      "min_kept": 8,
+      "max_kept": 8,
+      "invalid_groups": 0
+    },
+    {
+      "layer": "block.2.attn.k_conv",
+      "groups": 9216,
+      "min_kept": 8,
+      "max_kept": 8,
+      "invalid_groups": 0
+    },
+    {
+      "layer": "block.2.attn.v_conv",
+      "groups": 9216,
+      "min_kept": 8,
+      "max_kept": 8,
+      "invalid_groups": 0
+    },
+    {
+      "layer": "block.2.mlp.mlp1_conv",
+      "groups": 36864,
+      "min_kept": 8,
+      "max_kept": 8,
+      "invalid_groups": 0
+    },
+    {
+      "layer": "block.2.mlp.mlp2_conv",
+      "groups": 36864,
+      "min_kept": 8,
+      "max_kept": 8,
+      "invalid_groups": 0
+    },
+    {
+      "layer": "block.3.attn.q_conv",
+      "groups": 9216,
+      "min_kept": 8,
+      "max_kept": 8,
+      "invalid_groups": 0
+    },
+    {
+      "layer": "block.3.attn.k_conv",
+      "groups": 9216,
+      "min_kept": 8,
+      "max_kept": 8,
+      "invalid_groups": 0
+    },
+    {
+      "layer": "block.3.attn.v_conv",
+      "groups": 9216,
+      "min_kept": 8,
+      "max_kept": 8,
+      "invalid_groups": 0
+    },
+    {
+      "layer": "block.3.mlp.mlp1_conv",
+      "groups": 36864,
+      "min_kept": 8,
+      "max_kept": 8,
+      "invalid_groups": 0
+    },
+    {
+      "layer": "block.3.mlp.mlp2_conv",
+      "groups": 36864,
+      "min_kept": 8,
+      "max_kept": 8,
+      "invalid_groups": 0
+    }
+  ]
+}

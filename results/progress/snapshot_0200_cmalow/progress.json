@@ -1,0 +1,41 @@
+{
+  "status": "running",
+  "mode": "subset1000",
+  "implementation": "ExSpike-derived binary Spikformer RIA 8:16",
+  "completed": 200,
+  "total": 1000,
+  "percentage": 20.0,
+  "correct": 175,
+  "running_accuracy_percent": 87.5,
+  "elapsed_hours_this_process": 0.9420904708570904,
+  "estimated_remaining_hours": 3.7594280061555643,
+  "mean_e2e_latency_ms": 16917.42602770004,
+  "mean_kernel_latency_ms": 7431.386465110006,
+  "mean_matrix_kernel_latency_ms": 6813.420985900019,
+  "mean_attention_kernel_latency_ms": 617.96547921,
+  "recent_10_e2e_latency_ms": [
+    16973.791242999,
+    16770.332316002,
+    16866.472202,
+    16698.923560001,
+    17216.321170999,
+    16742.153215,
+    16854.034688,
+    16733.031037002,
+    17180.274654998,
+    16884.548457998
+  ],
+  "recent_10_kernel_latency_ms": [
+    7565.795569,
+    7383.064753001,
+    7461.447047,
+    7304.089275,
+    7562.076482,
+    7314.090734999,
+    7406.072381,
+    7362.336937,
+    7539.41937,
+    7342.771064999
+  ],
+  "updated_at": "2026-01-03T02:18:34.204967+00:00"
+}

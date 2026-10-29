@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "simulator": "Icarus Verilog",
+  "testbenches": [
+    "sim/tb_exspike.v",
+    "sim/tb_ternary_attention.v"
+  ],
+  "matrix_cases": 10,
+  "attention_scope": "signed non-identical tokens, temporal LIF state, AXI and work counters",
+  "scope": "actual RTL with AXI memory and register transactions; not HLS and not board inference",
+  "stdout": "CASE_PASS case=1 V=3 I=32 O=16 sparse=1 extreme=0 zero_period=0 events=188\nCASE_PASS case=2 V=3 I=27 O=10 sparse=0 extreme=0 zero_period=0 events=158\nCASE_PASS case=3 V=2 I=384 O=16 sparse=1 extreme=0 zero_period=5 events=306\nCASE_PASS case=4 V=1 I=2048 O=10 sparse=1 extreme=1 zero_period=0 events=4096\nCASE_PASS case=5 V=1 I=2048 O=10 sparse=1 extreme=-1 zero_period=0 events=4096\nCASE_PASS case=6 V=1 I=1024 O=8 sparse=0 extreme=1 zero_period=0 events=1024\nCASE_PASS case=7 V=1 I=1024 O=8 sparse=0 extreme=-1 zero_period=0 events=1024\nCASE_PASS case=8 V=1 I=32 O=8 sparse=1 extreme=0 zero_period=1000 events=1\nCASE_PASS case=9 V=2 I=32 O=10 sparse=1 extreme=0 zero_period=-1 events=0\nCASE_PASS case=10 V=150 I=27 O=10 sparse=0 extreme=0 zero_period=0 events=8018\nRTL_INTEGER_SIMULATION_PASS 10 cases; ExSpike filter/address/accumulator, MAC counters and4KiB boundary verified\nTERNARY_ATTENTION_RTL_PASS signed_nonidentical_tokens_temporal_state counters\n"
+}

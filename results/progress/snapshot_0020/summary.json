@@ -1,0 +1,21 @@
+{
+  "completed": 20,
+  "correct": 18,
+  "accuracy_percent": 90.0,
+  "software_agreement": 20,
+  "e2e_mean_ms": 17377.898803549997,
+  "kernel_mean_ms": 7445.3225591499995,
+  "matrix_mean_ms": 6827.340723699999,
+  "attention_mean_ms": 617.9818354500001,
+  "event_mean": 44523993.0,
+  "selected_mac_mean": 277285300.35,
+  "mac_skip_mean": 0.9028889297878999,
+  "calls": [
+    [
+      34,
+      30,
+      4
+    ]
+  ],
+  "updated_at": "2026-01-03T01:11:42.606443+00:00"
+}

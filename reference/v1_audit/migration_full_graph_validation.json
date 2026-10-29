@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "comparison": "immutable baseline NumPy graph vs migration_v1 NumPy hardware arithmetic",
+  "images": [
+    {
+      "position": 0,
+      "max_abs_logit_error": 0.0,
+      "bit_exact": true,
+      "baseline_prediction": 5,
+      "migration_prediction": 5,
+      "baseline_kernel_calls": 30,
+      "migration_kernel_calls": 34,
+      "migration_attention_calls": 4,
+      "qk_terms": 25165824,
+      "av_terms": 25165824
+    },
+    {
+      "position": 101,
+      "max_abs_logit_error": 0.0,
+      "bit_exact": true,
+      "baseline_prediction": 3,
+      "migration_prediction": 3,
+      "baseline_kernel_calls": 30,
+      "migration_kernel_calls": 34,
+      "migration_attention_calls": 4,
+      "qk_terms": 25165824,
+      "av_terms": 25165824
+    }
+  ],
+  "all_logits_bit_exact": true,
+  "model_weights_changed": false,
+  "ria_8_16_changed": false,
+  "board_tested": false
+}

@@ -1,0 +1,22 @@
+{
+  "status": "complete",
+  "mode": "subset1000",
+  "samples_planned": 1000,
+  "completed_samples": 1000,
+  "full_cifar10_test_split": false,
+  "sampling": "fixed stratified 1000; 100 per class",
+  "accuracy_percent": 90.4,
+  "ci95_wilson": [
+    88.41648792420682,
+    92.07430999016033
+  ],
+  "e2e_mean_ms": 16848.03783482096,
+  "kernel_mean_ms": 7121.122129966026,
+  "matrix_kernel_mean_ms": 6503.139240041986,
+  "attention_kernel_mean_ms": 617.982889924,
+  "correct": 904,
+  "e2e_median_ms": 16809.52504,
+  "kernel_median_ms": 7137.2746725015,
+  "throughput_images_per_second": 0.05935409273198767,
+  "visualization": "accuracy_latency.png"
+}

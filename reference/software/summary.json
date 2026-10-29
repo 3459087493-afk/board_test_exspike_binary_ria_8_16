@@ -1,0 +1,29 @@
+{
+  "binary_checkpoint_sha256": "6ee6a084f61b7b20c4730a1a8ab043079bbd38342bd422ccd32436562b6bd7ad",
+  "binary_checkpoint_metadata": {
+    "ria_nm": "8:16",
+    "source_checkpoint": "/home/free/prj/finn/Spikingformer/cifar10/output/train/20261007-201525-vitsnn-32/model_best.pth.tar",
+    "model_source": "/home/free/prj/finn/Spikingformer/cifar10/model.py",
+    "spike_mode": "binary"
+  },
+  "binary_masks": 20,
+  "binary_mask_kept": 3244032,
+  "binary_mask_total": 6488064,
+  "adapter_missing": [],
+  "adapter_unexpected": [],
+  "reference_missing": [],
+  "reference_unexpected": [],
+  "adapter_vs_reference_first20_max_abs": 0.0,
+  "adapter_vs_reference_first20_pred_agree": 20,
+  "binary_reference_accuracy_percent": 88.5,
+  "binary_v1_logits_accuracy_percent": 88.5,
+  "binary_ref_vs_binary_v1_logits_max_abs": 0.0,
+  "binary_ref_vs_binary_v1_pred_agree": 1000,
+  "binary_reference_seconds": 45.349462270736694,
+  "ternary_v1_missing": [],
+  "ternary_v1_unexpected": [],
+  "ternary_v1_software_accuracy_percent": 90.2,
+  "ternary_v1_board_accuracy_percent": 90.4,
+  "ternary_v1_software_vs_board_pred_agree": 948,
+  "ternary_v1_seconds": 50.17579984664917
+}

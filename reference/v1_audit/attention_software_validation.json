@@ -1,0 +1,78 @@
+{
+  "status": "PASS",
+  "source_evidence": {
+    "nm8_16_sha256": "d0fb5ebb62fcb49933ab02d673b2759bc70de3032f9669eeb6bcea56e803c85a",
+    "checkpoint_sha256": "4d2af5f76b758f4c7dcd3540c4e5cd24e4b71ecfa960c57d3886be0bca3c9531",
+    "tensor_shape": [
+      4,
+      1,
+      12,
+      64,
+      32
+    ],
+    "time_steps": 4,
+    "channels": 384,
+    "heads": 12,
+    "head_dimension": 32,
+    "tokens": 64,
+    "qkv_values": [
+      -1,
+      0,
+      1
+    ],
+    "score_norm": "none",
+    "attention_scale": 0.125,
+    "attention_scale_source": "nm8_16.py constructor default and checkpoint args; training create_model did not override it",
+    "operation_order": "Q @ K^T; result @ V; multiply 0.125; transpose/reshape; MultiStepLIF"
+  },
+  "lif_equivalence": {
+    "software": "v'=v+(x-v)/2; spike=(v'>=0.5); hard reset to 0",
+    "integer": "w=128v; A=(QK^T)V; w'=w/2+8A; spike=(w'>=64); reset w=0",
+    "rounding": "none for T=4: pre-shift w divisibility is 8,4,2,1 across stored states",
+    "accumulator_bounds": {
+      "score": [
+        -32,
+        32
+      ],
+      "attention_value": [
+        -2048,
+        2048
+      ],
+      "scaled_membrane_w_conservative": [
+        -30720,
+        30720
+      ],
+      "hardware_membrane_bits": 16
+    }
+  },
+  "cases": [
+    {
+      "name": "random_actual_shape",
+      "spike_mismatches": 0,
+      "score_max_abs_error": 0,
+      "value_max_abs_error": 0,
+      "positive_spikes": 31434
+    },
+    {
+      "name": "positive_extreme",
+      "spike_mismatches": 0,
+      "score_max_abs_error": 0,
+      "value_max_abs_error": 0,
+      "positive_spikes": 98304
+    },
+    {
+      "name": "negative_v_extreme",
+      "spike_mismatches": 0,
+      "score_max_abs_error": 0,
+      "value_max_abs_error": 0,
+      "positive_spikes": 0
+    },
+    {
+      "name": "all_zero",
+      "spike_mismatches": 0,
+      "score_max_abs_error": 0,
+      "value_max_abs_error": 0,
+      "positive_spikes": 0
+    }
+  ]
+}

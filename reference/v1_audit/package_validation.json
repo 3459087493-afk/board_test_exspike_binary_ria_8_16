@@ -1,0 +1,67 @@
+{
+  "status": "PASS",
+  "training_environment_required": false,
+  "checkpoint_and_nm8_16_hashes": "PASS",
+  "weight_layers": 30,
+  "ria_layers": 20,
+  "all_ria_groups_exact_8_of_16": true,
+  "attention_software_golden": "PASS",
+  "full_graph_two_images_all_logits_bit_exact": true,
+  "rtl_simulation": "PASS",
+  "timing": {
+    "clock_mhz": 100.0,
+    "wns_ns": 0.218,
+    "tns_ns": 0.0
+  },
+  "datasets": {
+    "cifar10_test": {
+      "samples": 10000,
+      "class_counts": [
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000,
+        1000
+      ]
+    },
+    "cifar10_subset1000": {
+      "samples": 1000,
+      "class_counts": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ]
+    }
+  },
+  "artifacts": {
+    "exspike_migration_8_16.bit": "92c8657baff4154ebf1c4339272d6b6f7d3c70ec0de1d8ad1561fd41a189b5a8",
+    "exspike_migration_8_16.hwh": "3f3173d8a047be1a1c1ab80c78c50f33fdbb48f3c53836ec18c923d26dd5c043",
+    "exspike_migration_8_16_build.xsa": "050ca2a4abfc00aeb0921ea3457ae078f9f38d92a796fee3249f5e5a249098ec",
+    "exspike_8_16_weights.npz": "50b726a81dd6474b4f954af41c7eed4cce00279a3bf6602d02649c6c022eb384"
+  },
+  "board_tested": true,
+  "board_pilot": {
+    "functional_gate": {
+      "status": "PASS",
+      "dataset_index": 6764,
+      "max_abs_logit_error": 0.0,
+      "prediction": 5
+    },
+    "measured_images": 20,
+    "mean_e2e_latency_ms": 16895.52796554981,
+    "mean_kernel_latency_ms": 7146.934547249999,
+    "selected_mode": "subset1000"
+  }
+}

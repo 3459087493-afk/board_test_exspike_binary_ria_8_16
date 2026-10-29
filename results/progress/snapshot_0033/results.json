@@ -1,0 +1,14 @@
+{
+  "status": "interrupted",
+  "mode": "subset1000",
+  "samples_planned": 1000,
+  "completed_samples": 33,
+  "full_cifar10_test_split": false,
+  "sampling": "fixed stratified 1000; 100 per class",
+  "accuracy_percent": null,
+  "ci95_wilson": null,
+  "e2e_mean_ms": null,
+  "kernel_mean_ms": null,
+  "matrix_kernel_mean_ms": null,
+  "attention_kernel_mean_ms": null
+}

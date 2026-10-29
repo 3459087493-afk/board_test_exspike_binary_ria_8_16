@@ -1,0 +1,53 @@
+{
+  "checked_rows": 30,
+  "progress_completed": 30,
+  "sequence_ok": true,
+  "indices_ok": true,
+  "labels_ok": true,
+  "calls": [
+    [
+      34,
+      30,
+      4
+    ]
+  ],
+  "correct": 28,
+  "accuracy_percent": 93.33333333333333,
+  "software_agreement": 30,
+  "e2e_mean_ms": 16911.710571133302,
+  "e2e_min_ms": 16582.270283001,
+  "e2e_max_ms": 18054.936210003,
+  "kernel_mean_ms": 7424.476133199999,
+  "matrix_mean_ms": 6806.508399766668,
+  "attention_mean_ms": 617.9677334333334,
+  "event_mean": 44052373.93333333,
+  "selected_mac_mean": 273897855.43333334,
+  "mac_skip_mean": 0.9040752833404333,
+  "last_row": {
+    "sequence_id": "29",
+    "dataset_index": "6285",
+    "label": "8",
+    "prediction": "8",
+    "correct": "1",
+    "e2e_latency_ms": "16669.187790001",
+    "kernel_latency_ms": "7261.385211000",
+    "matrix_kernel_latency_ms": "6643.435006000",
+    "attention_kernel_latency_ms": "617.950205000",
+    "kernel_call_count": "34",
+    "matrix_call_count": "30",
+    "attention_call_count": "4",
+    "kernel_mean_call_latency_ms": "213.570153265",
+    "timestamp": "2026-01-03T01:30:36.636239+00:00",
+    "event_count": "40863276",
+    "selected_mac_count": "248039636",
+    "mac_without_event_skip": "2855341824",
+    "mac_skip_rate": "0.913131368751",
+    "cycle_count": "664213030",
+    "matrix_read_beats": "117508740",
+    "attention_cycle_count": "61779179",
+    "attention_read_beats": "147456",
+    "attention_write_beats": "49152",
+    "attention_qk_terms": "25165824",
+    "attention_av_terms": "25165824"
+  }
+}

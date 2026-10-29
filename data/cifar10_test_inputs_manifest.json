@@ -1,0 +1,68 @@
+{
+  "files": {
+    "cifar10_test_images.npy": {
+      "sha256": "b38e59534d0fc58a94ea22c9a3504ab9eeeb26cc40337d9d4a57ea86bf3b40d2",
+      "bytes": 122880128
+    },
+    "cifar10_test_labels.npy": {
+      "sha256": "fc48d9ecfdbeacce2dacf004498170f2df12e75e3485475017d2663b587a92f3",
+      "bytes": 80128
+    },
+    "cifar10_test_indices.npy": {
+      "sha256": "3e7d12429f219ff5b6814ff1948c5b0e771431218bfb55b619b183b1e1264c51",
+      "bytes": 80128
+    },
+    "cifar10_subset1000_images.npy": {
+      "sha256": "b1ade992f818f678a138e97a334d3134e1535c313acb0d2e816770abb76a26ba",
+      "bytes": 12288128
+    },
+    "cifar10_subset1000_labels.npy": {
+      "sha256": "998b571dc076fcb72fe5d9e6de50e89c958acc5b2779b9fade559026536868a8",
+      "bytes": 8128
+    },
+    "cifar10_subset1000_indices.npy": {
+      "sha256": "54c4a168d718fdf1b5ea1273d95805a44f12254fcb9a5972a3885dffdf2e6610",
+      "bytes": 8128
+    }
+  },
+  "shape": [
+    10000,
+    3,
+    32,
+    32
+  ],
+  "dtype": "float32",
+  "class_counts": [
+    1000,
+    1000,
+    1000,
+    1000,
+    1000,
+    1000,
+    1000,
+    1000,
+    1000,
+    1000
+  ],
+  "source_test_batch": "/home/cym/prj2/finn/notebooks/end2end_example/sy2/model/data/cifar-10-batches-py/test_batch",
+  "source_test_batch_sha256": "f53d8d457504f7cff4ea9e021afcf0e0ad8e24a91f3fc42091b8adef61157831",
+  "preprocessing": {
+    "dataset": "official CIFAR-10 test split",
+    "samples": 10000,
+    "layout": "NCHW",
+    "dtype": "float32",
+    "to_tensor": "uint8 [0,255] divided by float32(255)",
+    "mean": [
+      0.49140000343322754,
+      0.4821999967098236,
+      0.4465000033378601
+    ],
+    "std": [
+      0.24699999392032623,
+      0.2434999942779541,
+      0.26159998774528503
+    ],
+    "reference_1000_array_equal": true,
+    "board_preprocessing": "none; tensors are already normalized"
+  }
+}
